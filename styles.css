@@ -1,8 +1,13 @@
 .container {
     display: grid;
-    grid-template-columns: 0.25fr 1fr;
+    grid-template-columns: 0.2fr 1fr;
     grid-template-rows: 0.25fr 1fr;
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    padding-left: 1rem;
 }
 
 .sidebar {
@@ -11,14 +16,199 @@
     background-color: #1992D4;
     font-family: 'Roboto', sans-serif;
     color: white;
+}
+/* .sidebar * * {
+    border: 1px solid black;
+} for debugging */
 
+.sidebar-item * * {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sidebar-item svg:not(.dashboard-icon) {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: white;
+}
+
+.sidebar-item svg.dashboard-icon {
+    margin-left: -0.5rem;
+    width: 3rem;
+    height: 3rem;
+    fill: white;
+}
+
+ul.sidebar-item-list-first li:first-child {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.sidebar-item-list-first, .sidebar-item-list-second {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.sidebar-item-list-second {
+    margin-top: 4rem;
+}
+
+li {
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .header {
     grid-column: 2 / 3;
     grid-row: 1 / 1;
-    background-color: lightslategray;
+    display: grid;
+    grid-template-columns: 0.66fr 0.33fr;
+    grid-template-rows: 0.5fr 0.5fr;
     font-family: 'Roboto', sans-serif;
     color: black;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+/* .header > * {
+    border: 1px solid black;
+} */
+
+.header-search-bar-and-icon {
+    display: flex;
+    align-items: center;
+}
+
+.header-item-search-bar {
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+
+.header-item-search-bar > input {
+    width: 95%;
+    background-color: #E2E8F0;
+    border-color: transparent;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.magnifying-glass-header {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-left: 1rem;
+}
+
+.header-bell-logo-and-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.header-bell-logo-and-name > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.header-profile-and-greeting-container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* .header-profile-and-greeting-container > * {
+    border: 1px solid black; for debugging */
+
+.header-profile-and-greeting-logo {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+}
+
+.header-profile-and-greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-profile-and-greeting > * {
+    /* border: 1px solid black; for debugging */
+    margin: 0;
+}
+
+.header-profile-and-greeting > p {
+    margin-top: 1rem;
+}
+
+.header-profile-and-greeting > h1 {
+    margin-bottom: 1rem;
+}
+
+.header-item-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-item-buttons > button {
+    border: transparent;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    background-color: #1992D4;
+    color: white;
+    cursor: pointer;
+}
+
+.header-item-buttons > button:hover {
+    background-color: #146693;
+}
+
+.main > * {
+    border: 1px solid black;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 0.66fr 0.33fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    background-color: #E2E8F0;
+}
+
+.main-item-projects {
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+    padding: 1.5rem;
+}
+
+.main-item-announcements {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+}
+
+.main-item-projects-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+[class^="main-item-projects-item-"] {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
